@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+        <button onclick="testChat()">Test Chat API</button>
+        <div id="result"></div>
+        <script>
+            async function testChat() {
+                try {
+                    const res = await fetch('chat_api.php?action=listar_chats');
+                    const text = await res.text();
+                    console.log('Response:', text);
+                    document.getElementById('result').innerText = text;
+                    try {
+                        const json = JSON.parse(text);
+                        if (json.success) alert('Chat API works!');
+                        else alert('Chat API returned error: ' + json.error);
+                    } catch (e) {
+                        alert('Invalid JSON response');
+                    }
+                } catch (e) {
+                    alert('Fetch failed: ' + e.message);
+                }
+            }
+        </script>
+    </body>
+
+</html>

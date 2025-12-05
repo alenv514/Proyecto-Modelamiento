@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f8fb;
+    color: #222;
+}
+.sidebar {
+    position: fixed;
+    left: 0; top: 0; bottom: 0;
+    width: 220px;
+    background: #176d7a;
+    color: #fff;
+    padding-top: 24px;
+}
+.logo {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 32px;
+    text-align: left;
+    padding-left: 32px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.logo-icon {
+    font-size: 1.2em;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu li {
+    padding: 14px 32px;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.05em;
+}
+.menu li.active, .menu li:hover {
+    background: #2ca8c6;
+}
+.menu-icon {
+    font-size: 1.1em;
+}
+.main-content {
+    margin-left: 220px;
+    padding: 32px 40px;
+}
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.search {
+    width: 320px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: 1px solid #dbe7ef;
+    font-size: 1em;
+    background: #fff;
+}
+.top-icons .icon {
+    margin-left: 18px;
+    font-size: 1.3em;
+    cursor: pointer;
+    color: #176d7a;
+}
+.cards {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0001;
+    padding: 24px 32px;
+    min-width: 160px;
+    flex: 1;
+    position: relative;
+}
+.card-title {
+    font-size: 1em;
+    color: #888;
+    margin-bottom: 8px;
+}
+.card-value {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #176d7a;
+}
+.card-trend {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 1.2em;
+    color: #2ca8c6;
+}
+.dashboard-row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+.overview {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0001;
+    padding: 24px;
+    flex: 2;
+}
+.overview-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.top-products {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0001;
+    padding: 24px;
+    flex: 1;
+}
+.top-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.products-list {
+    display: flex;
+    gap: 16px;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90px;
+}
+.product-img {
+    width: 48px;
+    height: 36px;
+    background: #e3e8ee url('https://img.icons8.com/ios-filled/50/000000/tv.png') center/contain no-repeat;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}
+.product-img.earbuds {
+    background: #e3e8ee url('https://img.icons8.com/ios-filled/50/000000/headphones.png') center/contain no-repeat;
+}
+.product-name {
+    font-size: 0.95em;
+    text-align: center;
+}
+.orders-section {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0001;
+    padding: 24px;
+}
+.orders-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1em;
+}
+.orders-table th, .orders-table td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid #e3e8ee;
+}
+.orders-table th {
+    color: #888;
+    font-weight: 500;
+    background: #f4f8fb;
+}
+.status {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.95em;
+}
+.status.shipped {
+    background: #e0f7e9;
+    color: #1ca67a;
+}
+.status.pending {
+    background: #fff3cd;
+    color: #b8860b;
+}
+@media (max-width: 900px) {
+    .main-content { padding: 16px 8px; }
+    .cards, .dashboard-row { flex-direction: column; gap: 16px; }
+}
